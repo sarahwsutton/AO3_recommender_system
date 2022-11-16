@@ -114,7 +114,7 @@ def get_comments(soup, idName, authorName):
 def get_metadata(soup,baseHTML):
     """ Obtains the metadata for each story in a page. and returns a 
     dictionary of it."""
-    works = soup.find_all(class_="work blurb group")
+    works = soup.find_all(role="article")
     metadata = {}
     for tag in works: 
         #Basic information:
